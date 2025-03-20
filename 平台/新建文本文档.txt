@@ -1,0 +1,6 @@
+base_models.pkl   # 5个基模型
+meta_model.pkl    # 元模型 (Ridge)
+scaler.pkl        # 归一化模型
+
+cd /D E:/Desktop/20250320平台/平台/
+streamlit run app.py

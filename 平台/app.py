@@ -5,11 +5,11 @@ import numpy as np
 import pandas as pd
 
 # **1️⃣ Set Streamlit Page**
-st.set_page_config(page_title="Stacking Model Prediction for MWM Arsenic Adsorption", layout="wide")
+st.set_page_config(page_title="As(III) Adsorption Capacity Prediction for MWM", layout="wide")
 
 # **2️⃣ Page Header**
-st.title("🔬 Stacking Model Prediction for MWM Arsenic Adsorption")
-st.markdown("This tool utilizes a **Stacking Ensemble Model** to predict arsenic adsorption using `MWM` materials.")
+st.title("🔬 As(III) Adsorption Capacity Prediction for MWM")
+st.markdown("This tool uses a **stacking ensemble model** to predict **As(III) adsorption capacity, q (mg/g)**, for `MWM` materials.")
 
 # **3️⃣ Automatically Get Current Python File Path (for GitHub / Servers)**
 MODEL_PATH = os.path.dirname(os.path.abspath(__file__))  # Automatically adapts to the current file path
@@ -72,6 +72,6 @@ if st.sidebar.button("🚀 Predict"):
         final_prediction = meta_model.predict(X_meta)[0]
 
         # **Display Results**
-        st.success(f"📊 **Predicted Adsorption Value:** `{final_prediction:.4f} mg/L`")
+        st.success(f"📊 **Predicted As(III) adsorption capacity, q:** `{final_prediction:.4f} mg/g`")
     except Exception as e:
         st.sidebar.error(f"❌ Prediction failed! Error: {e}")
